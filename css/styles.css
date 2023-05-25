@@ -1,29 +1,32 @@
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Bold.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Bold.woff') format('woff'),
+        url('../fonts/RobotoSlab-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
 }
 
+html {
+    font-size: 10px;
+}
 
 .flex {
     display: flex;
     justify-content: space-between;
     column-gap: 28px;
-
+    align-items: center;
 }
-
-
-/* body {
-    
-} */
-
 
 a {
     cursor: url(../images/cursor.cur), pointer;
     text-decoration: none;
-    color: #b1b1d2;
-
 }
-
-
 
 ul {
     list-style: none;
@@ -31,14 +34,21 @@ ul {
     margin: 0;
 }
 
+.top {
+    background-color: #1f1f56;
+}
+
 .wrapper {
     max-width: 960px;
     margin: 0 auto;
 }
 
-.top {
-    background-color: #1f1f56;
+.main-menu {
+    padding: 20px 0;
+}
 
+.menu a {
+    color: #b1b1d2;
 }
 
 .menu a:hover {
@@ -46,45 +56,34 @@ ul {
 }
 
 .hat {
-    align-items: center;
-    column-gap: 27px;
-    /* max-width: 219px; */
+    padding: 27px 0;
 }
 
-.header {
-    padding: 20px 0;
-
-}
-
-.menu ul li {
-    color: white;
-
+.contact,
+.adress {
+    padding-left: 29px;
+    box-sizing: border-box;
 }
 
 .menu ul {
     min-width: 480px;
-    font-size: 14px;
     letter-spacing: 2px;
-    line-height: 24px;
-    font-family: "Arial";
+    font: 1.4rem/1.7em "Arial";
 }
 
-
+.order {
+    text-align: right;
+}
 
 .order a:hover {
     background-color: #fd8300;
-
-
 }
 
 .order a {
     text-decoration: none;
-    font-size: 16px;
-    line-height: 24px;
     color: #25252c;
-    font-weight: bold;
-    font-family: "Arial";
-    padding: 15px 25px;
+    font: bold 1.6rem/1.5em "Arial";
+    padding: 12px 25px;
     display: inline-block;
     border-width: 2px;
     border-style: solid;
@@ -94,79 +93,140 @@ ul {
 }
 
 .mail {
-    font-size: 16px;
-    line-height: 24px;
-    text-decoration: underline;
     color: #25252c;
-    font-family: "Arial";
+    font: 1.6rem/1.5em "Arial";
+    position: relative;
+}
+
+.mail::before {
+    content: "";
+    position: absolute;
+    background: url(../images/email.png) no-repeat;
+    display: inline-block;
+    width: 18px;
+    height: 13px;
+    left: -28px;
+    top: 1px;
+}
+
+.mail:hover {
+    text-decoration: underline;
 }
 
 .skype {
-    font-size: 16px;
-    line-height: 24px;
     color: #25252c;
-    font-family: "Arial";
+    font: 1.6rem/1.5em "Arial";
+    position: relative;
+}
+
+.skype::before {
+    content: "";
+    position: absolute;
+    background: url(../images/skype.png) no-repeat;
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    left: -28px;
+    top: 1px;
+}
+
+.skype:hover {
+    text-decoration: underline;
 }
 
 .tel {
-    font-size: 18px;
-    line-height: 24px;
     color: #25252c;
-    font-weight: bold;
-    font-family: "Arial";
+    font: bold 1.8rem/1.33em "Arial";
+}
+
+.tel1 {
+    position: relative;
+}
+
+.tel1:before {
+    content: "";
+    background: url(../images/phone.png) no-repeat;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    left: -28px;
+    top: 1px;
+}
+
+.tel:hover {
+    text-decoration: underline;
 }
 
 .social {
-    /* align-content: space-between; */
-    /* padding: 19px 13px; */
-    /* justify-content: space-around; */
-    /* margin: 19px 0 19px 19px; */
     min-width: 100px;
 }
 
+.social a {
+    display: block;
+    background-image: url(../images/sprite.png);
+}
+
+.fb {
+    height: 19px;
+    width: 10px;
+    background-position: 0 0;
+}
+
+.fb:hover {
+    background-position: 0 -22px;
+}
+
+.tw {
+    height: 15px;
+    width: 18px;
+    background-position: -12px 1px;
+}
+
+.tw:hover {
+    background-position: -12px 28px;
+}
+
+.inst {
+    height: 19px;
+    width: 19px;
+    background-position: -31px 49px;
+}
+
+.inst:hover {
+    background-position: -31px 28px;
+}
+
 .proposition {
-    background-image: url(../images/main_photo1.png);
+    padding: 40px 0 20px;
     text-align: center;
+    background-image: url(../images/main_photo1.png);
     background-size: cover;
+    background-position: right;
 }
 
 .prop1 {
-    font-size: 30px;
-    letter-spacing: 2px;
-    line-height: 24px;
+    margin: 9px 0;
+    font: 700 3.0rem "Roboto Slab", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     color: #ffffff;
-    font-weight: 700;
-    font-family: "Roboto Slab";
-    padding-top: 60px;
-    padding-bottom: 9px;
-    margin: 0;
+    letter-spacing: 2px;
 }
 
 .prop2 {
-    font-size: 14px;
-    line-height: 24px;
+    margin: 8px 0;
     color: #ffffff;
-    font-family: "Arial";
-    padding-top: 8px;
-    padding-bottom: 9px;
-    margin: 0;
+    font: 1.4rem/1.7em "Arial";
 }
 
 .prop3 {
-    font-size: 40px;
-    line-height: 24px;
+    margin: 8px 0;
     color: #fd8300;
-    font-weight: bold;
-    font-family: "Arial";
-    padding-top: 8px;
-    padding-bottom: 35px;
-    margin: 0;
+    font: bold 4.0rem "Arial";
 }
 
 .prop3 .size {
-    font-size: 24px;
-
+    font-size: 2.4rem;
 }
 
 sup {
@@ -175,152 +235,162 @@ sup {
 
 .about {
     padding: 40px 0 45px 0;
+    align-items: stretch;
 }
 
 h1 {
-    /* font-size: 30px; */
-    /* line-height: 24px; */
     color: #24242b;
-    /* font-weight: 700; */
-    font-family: "Roboto Slab";
+    font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
 }
 
 .text p {
-    max-width: 677px;
-    font-size: 14px;
-    line-height: 24px;
-    color: #666666;
-    font-family: "Arial";
     margin: 20px 0;
+    max-width: 677px;
+    color: #666666;
+    font: 1.4rem/1.7em "Arial";
 }
 
 .details a:hover {
-
     text-decoration: underline;
 }
 
 .details a {
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: bold;
-    font-family: "Arial";
+    font: bold 1.4rem/1.7em "Arial";
     color: #fd8300;
 }
 
 h2 {
-    font-size: 24px;
-    line-height: 24px;
     color: #24242b;
-    font-weight: 700;
-    font-family: "Roboto Slab";
+    font: 700 2.4rem/1em "Roboto Slab", Arial, Helvetica, sans-serif;
     padding: 30px 0 30px 0;
 }
 
-
 .popular a {
-    font-size: 14px;
-    line-height: 24px;
     color: #1f1f56;
-    font-weight: bold;
-    font-family: "Arial";
+    font: 700 2.4rem/1em "Arial";
 }
 
 .popular a:hover {
     text-decoration: underline;
 }
 
+.cottage h3 {
+    color: #1f1f56;
+    font: 700 2.4rem/1em "Arial";
+}
+
+.cottage:hover h3 {
+    text-decoration: underline;
+}
+
+.cottage {
+    position: relative;
+}
+
+.cottage a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 .environment:hover .dropdown {
     display: block;
 }
 
+.dropdown a:hover {
+    background-color: #cecedd;
+}
 
+.list {
+    position: sticky;
+    top: 15px;
+}
 
 .list li {
-    
     background-color: #e3e3eb;
     font-size: 14px;
 }
 
+.list>ul>li:last-child {
+    border-radius: 0 0 3px 3px;
+}
+
 .list li a {
-    font-size: 14px;
-    line-height: 24px;
-    color: #25252c;
-    font-family: "Arial";
     display: block;
     padding: 17px 16px 13px 16px;
+    color: #25252c;
+    font: 1.4rem/1em "Arial";
+}
 
+.list>ul>li>a {
+    position: relative;
+    border-top: 1px solid #cdcddd;
+}
+
+.list>ul>li>a:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    height: 6px;
+    width: 6px;
+    border-right: 1px solid #666666;
+    border-top: 1px solid #666666;
+    transform: rotate(45deg);
+    transition: transform 0.5s ease;
 }
 
 .dropdown {
     display: none;
 }
 
-.list li a:hover {
-    color: white
+.list>ul>li>a:hover {
+    color: white;
+    background-color: #fd8300;
 }
 
-.list li:hover {
-    background-color: #fd8300;
-    /* position: absolute; */
-    /* display: block; */
-
+.list>ul>li>a:hover::after {
+    border-color: #ffffff;
+    transform: rotate(135deg);
+    transition: transform 0.5s ease;
 }
 
 .list p {
-    background-color: #1f1f56;
-    padding: 17px 51px 13px 16px;
     margin: 0;
-    font-size: 16px;
-    line-height: 24px;
+    padding: 17px 15px 13px 16px;
+    font: 700 1.6rem/1.5em "Roboto Slab", Arial, Helvetica, sans-serif;
     color: #ffffff;
-    font-weight: 700;
-    font-family: "Roboto Slab";
+    background-color: #1f1f56;
+    border-radius: 3px 3px 0 0;
 }
-
-
-li:hover {
-    
-}
-
-
-/* .list2 {
-    background-color: #e4e4ec;
-    padding: 18px 39px 14px 16px;
-    color: #25252c;
-}
-
-.list3 {
-    background-color: #e4e4ec;
-    padding: ;
-} */
 
 .column {
     min-width: 219px;
-    font-size: 14px;
-    line-height: 26px;
-    color: #666666;
-    font-family: "Arial";
+    width: 22.5%;
+}
 
+.footermenu a {
+    color: #666666;
+    font: 1.4rem/1.86em "Arial";
+}
+
+.footermenu a:hover {
+    color: #fd8300;
+    text-decoration: underline;
 }
 
 .thelast {
-    background-color: #dcdce6;
     padding: 15px 0 15px 0;
     text-align: center;
-    font-size: 13px;
-    line-height: 18px;
     color: #9999a6;
-    font-family: "Arial";
-
+    font-family: 1.3rem/1.38em "Arial";
+    background-color: #dcdce6;
 }
 
 .last {
+    padding: 30px 0;
     background-color: #ededf4;
-    padding: 44px 0 30px 0;
-
-}
-
-.column ul li a:hover {
-    color: #ffffff;
-    
 }
