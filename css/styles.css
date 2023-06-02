@@ -197,50 +197,8 @@ ul {
     background-position: -31px 28px;
 }
 
-th {
-    text-align: left;
-    width: 960px;
-height: 45px;
-padding: 1px 20px 1px 20px;
-background-color: #1f1f56;
-font-size: 14px;
-line-height: 24px;
-color: #ffffff;
-font-weight: 700;
-font-family: "Roboto Slab";
-}
 
-td {
-    width: 960px;
-height: 41px;
-padding: 1px 20px 1px 20px;
-box-shadow: inset 0px -1px 0px #cecedd;
-background-color: #e4e4ec;
-font-size: 14px;
-line-height: 24px;
-color: #666666;
-font-family: "Arial";
-}
 
-td:last-child,
-th:last-child{
-    text-align: right;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-tr:hover td {
-    background-color: #fd8300;
-}
-
-.conditions {
- font: 1.3em/1.6rem "Arial";
-line-height: 21px;
-color: #666666;
-}
 .proposition {
     padding: 40px 0 20px;
     text-align: center;
@@ -283,16 +241,80 @@ sup {
 }
 
 h1 {
+    margin-bottom: 20px;
     color: #24242b;
     font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
 }
 
 .text p {
-    margin: 20px 0;
-    max-width: 677px;
     color: #666666;
     font: 1.4rem/1.7em "Arial";
 }
+
+
+.prices_wrapper {
+    margin: 27px 0;
+}
+
+table.prices {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.prices th {
+    padding: 12px 20px;
+    text-align: left;
+    color: #ffffff;
+    font: 700 1.4rem "Roboto Slab";
+    background-color: #1f1f56;
+}
+
+.prices td {
+    padding: 12px 20px;
+    color: #666666;
+    font: 1.4rem "Arial";
+    background-color: #e4e4ec;
+}
+
+.prices tr:not(:last-child) td {
+    border-bottom: 1px solid #cecedd;
+}
+
+.prices td:last-child,
+.prices th:last-child {
+    text-align: right;
+}
+
+.prices th:first-child {
+    border-radius: 3px 0 0 0;
+}
+
+.prices th:last-child {
+    border-radius: 0 3px 0 0;
+}
+
+.prices tr:last-child td:last-child {
+    border-radius: 0 0 3px 0;
+}
+
+.prices tr:last-child td:first-child {
+    border-radius: 0 0 0 3px;
+}
+
+.prices tr:hover td {
+    color: #ffffff;
+    background-color: #fd8300;
+}
+
+.conditions {
+    font: 1.3em/1.6rem "Arial";
+       line-height: 21px;
+    color: #666666;
+}
+
+.details { 
+margin-top: 20px;
+} 
 
 .details a:hover {
     text-decoration: underline;
@@ -301,7 +323,8 @@ h1 {
 .details a {
     font: bold 1.4rem/1.7em "Arial";
     color: #fd8300;
-}
+    }
+
 
 h2 {
     color: #24242b;
@@ -345,7 +368,8 @@ h2 {
     font-family: 1.3rem/1.38em "Arial";
 }
 
-.environment:hover .dropdown {
+.list>ul>li:hover>.dropdown,
+.list>ul>li>.dropdown>li:hover .dropdown {
     display: block;
 }
 
