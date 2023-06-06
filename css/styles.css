@@ -90,6 +90,7 @@ ul {
     border-color: #fd8300;
     border-radius: 25px;
     text-decoration: none;
+    box-shadow: 5px 10px 10px 5px;
 }
 
 .mail {
