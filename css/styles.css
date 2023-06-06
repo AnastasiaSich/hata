@@ -77,6 +77,10 @@ ul {
 
 .order a:hover {
     background-color: #fd8300;
+    
+    box-shadow: inset 5px 5px 8px rgba(247, 196, 121, 0.842),
+    inset -5px -5px 8px 5px rgba(150, 81, 9, 0.7),
+    5px 8px 5px rgba(236, 125, 6, 0.5);
 }
 
 .order a {
@@ -87,10 +91,12 @@ ul {
     display: inline-block;
     border-width: 2px;
     border-style: solid;
+    box-shadow: inset 5px 5px 6px rgba(247, 196, 121, 0.842),
+    inset -5px -5px 8px 5px rgba(236, 216, 194, 0.5);
     border-color: #fd8300;
     border-radius: 25px;
     text-decoration: none;
-    box-shadow: 5px 10px 10px 5px;
+    
 }
 
 .mail {
